@@ -76,8 +76,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 Contributions are welcome! Please open an issue or submit a pull request for improvements or bug fixes.
 
 ## Contact
-For questions or support, please open an issue in this repository.
-
+Profiles
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hamza-rasheed-6a9b3b23a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
 [![GitHub](https://img.shields.io/badge/GitHub-black?logo=github&logoColor=white)](https://github.com/hmzarasheed)
