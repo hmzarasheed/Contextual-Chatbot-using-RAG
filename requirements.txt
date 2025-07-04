@@ -1,0 +1,8 @@
+requests
+chromadb
+sentence-transformers
+psycopg2-binary
+numpy
+faiss-cpu
+python-dotenv
+openai

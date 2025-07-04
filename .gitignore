@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual environment
+venv/
+ENV/
+env/
+.venv/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# FAISS and other data/index files
+faiss_db/
+*.pkl
+*.index
+
+# Pending chat data (if you don't want to version these)
+pending_chats/
+
+# Environment variables
+.env
+
+# VSCode and IDE settings
+.vscode/
+.idea/
+*.swp
