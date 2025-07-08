@@ -7,28 +7,6 @@ try:
 except ImportError:
     OpenAI = None
 
-def wants_summary(user_input: str) -> bool:
-    keywords = [
-        'overview', 'summary', 'summarize', 'recap', 'brief', 'in short', 'in summary', 'summarise',
-        'did we talk about', 'did we discuss', 'have we talked about', 'have we discussed', 'does we talked about', 'does we discussed', 'did we mention', 'have we mentioned', 'was it discussed', 'was it mentioned'
-    ]
-    user_input_lower = user_input.lower()
-    return any(kw in user_input_lower for kw in keywords)
-
-def wants_full_details(user_input: str) -> bool:
-    keywords = [
-        'everything', 'all details', 'full conversation', 'every message', 'all turns', 'complete history', 'tell me all', 'entire conversation', 'all responses', 'all exchanges', 'give all the convo', 'give all the conversation', 'show all the conversation', 'show all the convo'
-    ]
-    user_input_lower = user_input.lower()
-    return any(kw in user_input_lower for kw in keywords)
-
-def needs_context(user_input: str) -> bool:
-    keywords = [
-        'it', 'that', 'those', 'them', 'earlier', 'previous', 'before', 'last time', 'you said', 'we discussed', 'the above', 'the previous', 'the earlier', 'the context', 'the conversation'
-    ]
-    user_input_lower = user_input.lower()
-    return any(kw in user_input_lower for kw in keywords)
-
 def llm_choose_tool(user_input: str) -> str:
     """
     Use the LLM to decide which tool to use: 'retrieve_summary', 'retrieve_turns', or 'direct_answer'.
@@ -66,7 +44,7 @@ def llm_choose_tool(user_input: str) -> str:
         # Fallback: default to direct_answer
         return "direct_answer"
 
-def decide_and_retrieve(user_input: str, top_k: int = 5):
+def decide_and_retrieve(user_input: str, top_k: int = 1):
     """
     Use the LLM to decide what to retrieve (summary, turns, or nothing) based on user input.
     Returns: (prompt, debug_info)

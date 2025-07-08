@@ -59,26 +59,3 @@ def start_chat():
         with open(file_path, "w", encoding="utf-8") as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
         print(f"[Chat] Session saved to {file_path} for background processing.")
-
-
-def needs_context(user_input: str) -> bool:
-    # Simple heuristic: look for pronouns or references to previous context
-    keywords = [
-        'it', 'that', 'those', 'them', 'earlier', 'previous', 'before', 'last time', 'you said', 'we discussed', 'the above', 'the previous', 'the earlier', 'the context', 'the conversation'
-    ]
-    user_input_lower = user_input.lower()
-    return any(kw in user_input_lower for kw in keywords)
-
-def wants_summary(user_input: str) -> bool:
-    keywords = [
-        'overview', 'summary', 'summarize', 'recap', 'brief', 'in short', 'in summary', 'summarise'
-    ]
-    user_input_lower = user_input.lower()
-    return any(kw in user_input_lower for kw in keywords)
-
-def wants_full_details(user_input: str) -> bool:
-    keywords = [
-        'everything', 'all details', 'full conversation', 'every message', 'all turns', 'complete history', 'tell me all', 'entire conversation', 'all responses', 'all exchanges'
-    ]
-    user_input_lower = user_input.lower()
-    return any(kw in user_input_lower for kw in keywords)
