@@ -72,8 +72,6 @@ requirements.txt       # Python dependencies
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## Contributing
-Contributions are welcome! Please open an issue or submit a pull request for improvements or bug fixes.
 
 ## Contact
 Profiles
